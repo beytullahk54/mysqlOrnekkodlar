@@ -1,5 +1,7 @@
 
-CREATE DATABASE kartsis;
+CREATE DATABASE kartsis; /* Veritabanı Oluşturma*/
+
+/*Tablo oluşturma Kodları*/
 
 CREATE TABLE `il` (  `id` int(11)  PRIMARY KEY AUTO_INCREMENT,  `il_adi` varchar(15) ) ;
 
@@ -7,11 +9,17 @@ CREATE TABLE `il_tarife` (  `id` int(11)  PRIMARY KEY AUTO_INCREMENT,  `il_id` i
 
 CREATE TABLE `uyeler` (  `id` int(11)  PRIMARY KEY AUTO_INCREMENT,  `kart_no` int(11) , `tur` varchar(15), `adi` varchar(15) ,  `soyadi` varchar(15) ,  `sifre` varchar(15) ,  `il_id` varchar(2) ,  `bakiye` float(11) ) ;
 
+/*Tablo oluşturma Kodları*/
+
+/*Örnek Veri Ekleme Kodları*/
+
 INSERT INTO `il_tarife` (`id`, `il_id`, `il_vasita_tur`, `il_vasita_ad`, `il_vasita_fiyat`) VALUES(1, 1, 'Ogrenci', 'Otobüs', '1.50');
 
 INSERT INTO `il` (`id`, `il_adi`) VALUES(1, 'Adana');
 
 INSERT INTO `uyeler` (`id`, `kart_no`, `adi`, `soyadi`, `sifre`, `il_id`, `bakiye`,`tur`) VALUES(1, 101010, 'burak', 'öner', '123456', '1', 10,`Ogrenci`);
+
+/*Örnek Veri Ekleme Kodları*/
 
 
 /* Kart basıldığında bakiye düşüren mysql */
